@@ -10,10 +10,10 @@ plot2 <- function(){
   
   rawData$Date <- as.Date(rawData$Date, format = "%d/%m/%Y")
 
-#Get a subset of the data
+#Get a subset of the data  dates 2007-02-01 and 2007-02-02
   dataSubset <-
-    subset(rawData, subset = (Date >= "2006-12-01" &
-                                        Date <= "2006-12-31"))
+    subset(rawData, subset = (Date >= "2007-02-01" &
+                                Date <= "2007-02-02"))
   dates <- paste(as.Date(dataSubset$Date),dataSubset$Time)
   
   dataSubset$Datetime <- as.POSIXct(dates) 
