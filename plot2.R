@@ -1,7 +1,5 @@
 
-
-
-plot1 <- function() {
+plot2 <- function(){
   dataFilePath <- getwd()
   consumptionData <-
     read.table(
@@ -10,35 +8,27 @@ plot1 <- function() {
         FALSE, na.strings = "?"
     )
   
-  #head(consumptionData)
-  
-  consumptionData$Date <-
-    as.Date(consumptionData$Date, format = "%d/%m/%Y")
-  #  head(consumptionData$Date)
-  
+  consumptionData$Date <- as.Date(consumptionData$Date, format = "%d/%m/%Y")
+
   #Get a subset of the data
   dataSubset <-
     subset(consumptionData, subset = (Date >= "2006-12-01" &
                                         Date <= "2006-12-16"))
   dates <- paste(as.Date(dataSubset$Date),dataSubset$Time)
   
-  dataSubset$Datetime <- as.POSIXct(dates)
-  #summary(dataSubset)
+  dataSubset$Datetime <- as.POSIXct(dates) 
   
   #remove the fully loaded data object from memory
   rm(consumptionData)
   
   activePower <- as.numeric(dataSubset$Global_active_power)
-  summary(activePower)
+   
   quartz("Quartz", width = 5, height = 4, pointsize = 18)
   
-  hist(
-    activePower,  main = "Global Active Power", xlab = "Global Active Power (Kw)", ylab = "Frequency", col = "Red"
-  )
+  plot(activePower~dataSubset$Datetime, type="l", ylab = "Global Active Power (Kw)", xlab="") 
   
   #Save file
-  dev.copy(png, file = "./ExData_Plotting1/plot1.png", height = 480, width = 480)
+  dev.copy(png, file = "./ExData_Plotting1/plot2.png", height = 480, width = 480)
   dev.off()
   
-  
-}
+} 
