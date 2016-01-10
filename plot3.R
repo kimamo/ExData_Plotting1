@@ -26,19 +26,21 @@ plot3 <- function(){
   quartz("Quartz", width = 8, height = 7, pointsize = 21)
   
   #plot graph
+  
   with(dataSubset,{
-  plot(Sub_metering_1~dataSubset$Datetime, type="l", ylab = "Global Active Power (Kw)", 
-       xlab="") 
+    par(mar=c(5,6,4,2)+0.1,mgp=c(5,1,0))
+    plot(Sub_metering_1~dataSubset$Datetime, type="l", ylab = "Global Active Power (Kw)", 
+         xlab="") 
     lines(Sub_metering_2~Datetime, col = "Red")
     lines(Sub_metering_3~Datetime, col = "Blue")
   })
 #Add legends
-  legend("topright", col = c("Black", "Red", "Blue"), lty = 1, lwd = 2,
+  legend("topright", col = c("Black", "Red", "Blue"), lty = 1, lwd = 2, 
             legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
          )
   
   #Save file
-  dev.copy(png, file = "plot3.2.png", height = 480, width = 480)
+  dev.copy(png, file = "plot3.png", height = 480, width = 480)
   dev.off()
   
 } 
