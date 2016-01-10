@@ -1,3 +1,8 @@
+<title> Data Science specialzation: Exploring Data Analysis Project 1 </title>
+<author> Kimamo Wachira </author>
+<date> Jan 10th 2016 </date>
+
+
 ## Introduction
 
 This assignment uses data from
