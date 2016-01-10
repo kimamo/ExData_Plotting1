@@ -121,3 +121,12 @@ The four plots that you will need to construct are shown below.
 
 ### Plot 1
 ![Plot1 image](./plot1.png)
+
+### Plot 2
+![Plot2 image](./plot2.png)
+
+### Plot 3
+![Plot3 image](./plot3.png)
+
+### Plot 4
+![Plot4 image](./plot4.png)
