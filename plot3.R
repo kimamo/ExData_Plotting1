@@ -29,7 +29,7 @@ plot3 <- function(){
   
   with(dataSubset,{
     par(mar=c(5,6,4,2)+0.1,mgp=c(5,1,0))
-    plot(Sub_metering_1~dataSubset$Datetime, type="l", ylab = "Global Active Power (Kw)", 
+    plot(Sub_metering_1~dataSubset$Datetime, type="l", ylab = "Energy sub mertering", 
          xlab="") 
     lines(Sub_metering_2~Datetime, col = "Red")
     lines(Sub_metering_3~Datetime, col = "Blue")
