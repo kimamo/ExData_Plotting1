@@ -1,6 +1,6 @@
 ## Data Science specialzation: Exploring Data Analysis Project 1 
-## Kimamo Wachira 
-## Jan 10th 2016
+by Kimamo Wachira 
+<br> Jan 10th 2016
 
 
 ## Introduction
